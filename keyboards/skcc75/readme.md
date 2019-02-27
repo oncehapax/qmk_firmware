@@ -1,8 +1,6 @@
 # skcc75
 
-![skcc75](imgur.com image replace me!)
-
-A short description of the keyboard/project
+75% keyboard inspired by the IBM Pingmaster utilizing SKCC switches. 
 
 Keyboard Maintainer: [MechMerlin](https://github.com/mechmerlin)  
 Hardware Supported: The PCBs, controllers supported  
