@@ -174,40 +174,24 @@ static void unselect_cols(void) {
 
   DDRF  |=  0b00000011;
   PORTF &= ~0b00000011;
-
-  // Columns tied directly to atmega32u4 pins
-  DDRE  |=  0b01000000;
-  PORTE &= ~0b01000000;
-
-  DDRB  |=  0b10010001;
-  PORTB &= ~0b10010001;
-
-  DDRD  |=  0b10000001;
-  PORTD &= ~0b10000001;
 }
 
 static void select_col(uint8_t col) {
  
    switch (col) {
         case 0:
-            PORTC |= 0b00000000;
-            PORTF |= 0b00000000;
             break;
         case 1:
-            PORTC |= 0b00000000;
             PORTF |= 0b00000001;
             break;
         case 2:
-            PORTC |= 0b00000000;
             PORTF |= 0b00000010;
             break;
         case 3:
-            PORTC |= 0b00000000;
             PORTF |= 0b00000011;
             break;
         case 4:
             PORTC |= 0b10000000;
-            PORTF |= 0b00000000;
             break;
         case 5:
             PORTC |= 0b10000000;
