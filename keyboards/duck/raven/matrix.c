@@ -155,7 +155,7 @@ uint8_t read_fwkey(void)
 
 /* Columns 0 - 7
  * These columns use 1 74HC237D 3 to 8 bit demultiplexers.
- * col / pin:    PC6 (E2)  PF0 (A0)  PF1 (A1) PC7 (A2)  
+ * col / pin:    PC6 (E3)  PF0 (A0)  PF1 (A1) PC7 (A2)  
  * 0: (Y0)         1         0        0        0    
  * 1: (Y1)         1         1        0        0    
  * 2: (Y2)         1         0        1        0    
