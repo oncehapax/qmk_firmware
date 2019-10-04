@@ -166,6 +166,14 @@ uint8_t read_fwkey(void)
  * 7: (Y7)         1         1        1        1     
  *
  * * Columns 8 - 14
+ * These columns are driven by pins on the atmega32u4 mcu. 
+ * 8:  E6
+ * 9:  B0
+ * 10: B7
+ * 11: D4
+ * 12: D6
+ * 13: D7
+ * 14: B3
  */
 static void unselect_cols(void) {
   // Columns tied to 74HC237D for 74HC237D pins A0, A1, A2. 
@@ -174,6 +182,16 @@ static void unselect_cols(void) {
 
   DDRF  |=  0b00000011;
   PORTF &= ~0b00000011;
+
+  // Columns driven by atmega32u4 mcu. 
+  DDRB  |=  0b10001001;
+  PORTB &= ~0b10001001;
+
+  DDRD  |=  0b11010000;
+  PORTD &= ~0b11010000;
+
+  DDRE  |=  0b01000000;
+  PORTE &= ~0b01000000;
 }
 
 static void select_col(uint8_t col) {
