@@ -1,0 +1,1 @@
+ #define TRANSIENT_EEPROM_SIZE 1024 
